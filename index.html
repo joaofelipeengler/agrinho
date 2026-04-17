@@ -2,10 +2,10 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <title>Agrinho 2026 | Agro Forte, Futuro Sustentável</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
@@ -29,7 +29,7 @@
                 <li><a href="#interativo">Interativo</a></li>
             </ul>
         </nav>
-        <button id="darkModeToggle" class="dark-mode-btn">
+        <button id="darkModeToggle" class="dark-mode-btn" aria-label="Alternar modo escuro">
             <i class="fas fa-moon"></i>
         </button>
     </div>
@@ -226,7 +226,7 @@
                         <i class="fas fa-tractor"></i>
                     </div>
                     <h3>O desafio</h3>
-                    <p>Como produzir mais alimentos preservando os recursos naturais para as futuras gerações?</p>
+                    <p>Como produzir mais alimentos preservando os recursos naturais para as futuras gerações? A tecnologia é a resposta.</p>
                 </div>
                 
                 <div class="acoes-sustentaveis">
@@ -274,8 +274,8 @@
                 <span>Agrinho Programação</span>
             </div>
             <div class="footer-links">
-                <a href="https://www.educacao.pr.gov.br/programacao" target="_blank">Site Oficial SEED</a>
-                <a href="https://www.sistemafaep.org.br/agrinho/" target="_blank">Site Oficial Agrinho</a>
+                <a href="https://www.educacao.pr.gov.br/programacao" target="_blank" rel="noopener noreferrer">Site Oficial SEED</a>
+                <a href="https://www.sistemafaep.org.br/agrinho/" target="_blank" rel="noopener noreferrer">Site Oficial Agrinho</a>
             </div>
             <div class="footer-contact">
                 <i class="fas fa-envelope"></i>
@@ -292,7 +292,6 @@
 <script>
     // ===== DARK MODE =====
     const darkModeToggle = document.getElementById('darkModeToggle');
-    const htmlElement = document.documentElement;
     
     // Verificar preferência salva
     if (localStorage.getItem('darkMode') === 'enabled') {
@@ -369,14 +368,15 @@
         atualizarContador();
         
         // Animação de feedback
+        const originalText = btnInspirar.innerHTML;
         btnInspirar.innerHTML = '<i class="fas fa-check"></i> Obrigado pelo apoio!';
         btnInspirar.style.background = '#4CAF50';
         setTimeout(() => {
-            btnInspirar.innerHTML = '<i class="fas fa-thumbs-up"></i> Eu apoio o agro sustentável';
+            btnInspirar.innerHTML = originalText;
             btnInspirar.style.background = '';
         }, 2000);
         
-        // Efeito de confetes suave
+        // Efeito visual
         mensagemDiv.style.transform = 'scale(1.02)';
         setTimeout(() => { mensagemDiv.style.transform = 'scale(1)'; }, 300);
     });
@@ -403,7 +403,7 @@
         });
     }, observerOptions);
     
-    document.querySelectorAll('.card, .regra-item, .premio-card, .info-card').forEach(el => {
+    document.querySelectorAll('.card, .regra-item, .premio-card, .info-card, .acoes-sustentaveis, .engajamento-card').forEach(el => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(30px)';
         el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
