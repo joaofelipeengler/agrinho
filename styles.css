@@ -130,6 +130,9 @@ body.dark-mode .header {
     transition: var(--transition);
     color: white;
     font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .dark-mode-btn:hover {
@@ -486,6 +489,7 @@ body.dark-mode .premio-card {
     justify-content: center;
     gap: 12px;
     font-weight: 600;
+    flex-wrap: wrap;
 }
 
 /* Interativo */
@@ -546,6 +550,7 @@ body.dark-mode .engajamento-card {
     align-items: center;
     justify-content: center;
     gap: 8px;
+    font-size: 14px;
 }
 
 .solucao-btn:hover {
@@ -583,6 +588,7 @@ body.dark-mode .engajamento-card {
     font-size: 16px;
     transition: var(--transition);
     margin-top: 16px;
+    width: 100%;
 }
 
 .btn-inspirar:hover {
@@ -639,6 +645,7 @@ body.dark-mode .engajamento-card {
     display: flex;
     align-items: center;
     gap: 8px;
+    flex-wrap: wrap;
 }
 
 .footer-bottom {
@@ -677,6 +684,7 @@ body.dark-mode .engajamento-card {
     .footer-content {
         flex-direction: column;
         text-align: center;
+        justify-content: center;
     }
     
     .hero-stats {
@@ -685,6 +693,10 @@ body.dark-mode .engajamento-card {
     
     .stat-number {
         font-size: 28px;
+    }
+
+    .premio-card.premio-destaque {
+        transform: scale(1);
     }
 }
 
@@ -703,5 +715,13 @@ body.dark-mode .engajamento-card {
     
     .premios-container {
         grid-template-columns: 1fr;
+    }
+
+    .botoes-solucoes {
+        flex-direction: column;
+    }
+
+    .solucao-btn {
+        width: 100%;
     }
 }
