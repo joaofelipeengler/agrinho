@@ -524,13 +524,13 @@ body.dark-mode .pratica-card {
     font-weight: 600;
 }
 
-/* Mulher */
-.mulher {
+/* Cooperação (nova seção - substituindo a antiga seção da mulher) */
+.cooperacao {
     background: linear-gradient(135deg, rgba(46,125,50,0.1) 0%, rgba(76,175,80,0.05) 100%);
     padding: 80px 0;
 }
 
-.mulher-content {
+.cooperacao-content {
     display: grid;
     grid-template-columns: 1fr auto;
     gap: 48px;
@@ -538,12 +538,12 @@ body.dark-mode .pratica-card {
 }
 
 @media (max-width: 768px) {
-    .mulher-content {
+    .cooperacao-content {
         grid-template-columns: 1fr;
     }
 }
 
-.mulher-texto h2 {
+.cooperacao-texto h2 {
     font-size: 36px;
     margin: 16px 0 24px;
 }
@@ -578,15 +578,16 @@ body.dark-mode .pratica-card {
     font-size: 20px;
 }
 
-.mulher-icon {
+.cooperacao-icon {
     text-align: center;
 }
 
-.mulher-icon i {
-    font-size: 120px;
+.cooperacao-icon i {
+    font-size: 100px;
     color: var(--primary-light);
     opacity: 0.3;
-    display: block;
+    display: inline-block;
+    margin: 0 10px;
 }
 
 /* Passo a Passo */
@@ -1099,6 +1100,14 @@ body.dark-mode .alerta-card {
     .exemplo-box i {
         margin: 0 auto;
     }
+    
+    .cooperacao-texto h2 {
+        font-size: 28px;
+    }
+    
+    .cooperacao-icon i {
+        font-size: 70px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1125,10 +1134,6 @@ body.dark-mode .alerta-card {
     }
     
     .alertas-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .premios-container {
         grid-template-columns: 1fr;
     }
     
